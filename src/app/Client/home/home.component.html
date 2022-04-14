@@ -1,0 +1,46 @@
+<div class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let data1 of category" >
+        <div
+          class="banner_item align-items-center"
+          style="background-image: url({{data1.categoryImg}})"
+        >
+          <div class="banner_category">
+            <a href="#">{{data1.categoryName}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product -->
+<app-product></app-product>
+
+<!-- Deal of the week -->
+<div class="deal_ofthe_week">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="deal_ofthe_week_img">
+            <img src="assets/images/deal_ofthe_week.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 text-right deal_ofthe_week_col">
+          <div class="deal_ofthe_week_content d-flex flex-column align-items-center float-right">
+            <div class="section_title">
+              <h2>Món ngon trong ngày</h2>
+            </div>
+            
+            <div class="red_button deal_ofthe_week_button"><a href="#">Đặt ngay!</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- feedback -->
+ <app-feedback></app-feedback>
+  <!-- Benefit -->
+ <app-benefit></app-benefit>
+  <!-- Newsletter -->
+  <app-newsletter></app-newsletter>
