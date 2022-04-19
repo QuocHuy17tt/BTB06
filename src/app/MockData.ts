@@ -1,5 +1,5 @@
-import { Product, Slide, Category } from './Product';
-export const data: Product[] = [
+import { Product, Slide, Category, Menu, User } from './Product';
+export const listProduct: Product[] = [
   {
     id: 1,
     name: 'Item 1',
@@ -55,7 +55,7 @@ export const data: Product[] = [
     img: 'https://picsum.photos/235/235',
   },
 ];
-export const data1: Category[] = [
+export const Categories: Category[] = [
   {
     categoryId: 1,
     categoryName: 'Cơm',
@@ -72,17 +72,44 @@ export const data1: Category[] = [
     categoryImg: 'https://picsum.photos/235/235',
   },
 ];
-export const data2: Slide[] = [
+export const listSlide: Slide[] = [
   {
     slideId: 1,
     slideImage: 'https://picsum.photos/1905/700',
+    slideText: 'Món ngon cho mùa hè',
+    slideTextImg: 'Giảm giá 30% cho các loại đồ uống',
+    buttonText: 'ĐẶT NGAY !',
   },
-//   {
-//     slideId: 2,
-//     slideImage: 'https://picsum.photos/1905/700',
-//   },
-//   {
-//     slideId: 3,
-//     slideImage: 'https://picsum.photos/1905/700',
-//   },
+  //   {
+  //     slideId: 2,
+  //     slideImage: 'https://picsum.photos/1905/700',
+  //   },
+  //   {
+  //     slideId: 3,
+  //     slideImage: 'https://picsum.photos/1905/700',
+  //   },
 ];
+
+export const listMenu: Menu[] = [
+  {
+    menuId: 1,
+    menuName: 'Thực đơn',
+  },
+  {
+    menuId: 2,
+    menuName: 'Liên hệ',
+  },
+  {
+    menuId: 1,
+    menuName: 'About',
+  },
+];
+
+export const listUser: User[] = [
+  {
+    userId: 1,
+    userName: '',
+    userPhoneNumber: +84,
+    userEmail: '',
+  }
+]

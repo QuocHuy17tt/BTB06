@@ -1,13 +1,13 @@
 <div class="banner">
   <div class="container">
     <div class="row">
-      <div class="col-md-4" *ngFor="let data1 of category" >
+      <div class="col-md-4" *ngFor="let categories of category" >
         <div
           class="banner_item align-items-center"
-          style="background-image: url({{data1.categoryImg}})"
+          style="background-image: url({{categories.categoryImg}})"
         >
           <div class="banner_category">
-            <a href="#">{{data1.categoryName}}</a>
+            <a href="#">{{categories.categoryName}}</a>
           </div>
         </div>
       </div>

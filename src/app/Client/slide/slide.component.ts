@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { data2 } from '../../MockData';
+import { listSlide } from '../../MockData';
 @Component({
   selector: 'app-slide',
   templateUrl: './slide.component.html',
@@ -11,6 +11,6 @@ export class SlideComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  slide = data2
+  slide = listSlide
 
 }

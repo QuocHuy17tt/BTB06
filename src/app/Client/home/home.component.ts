@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { data1 } from '../../MockData';
+import { Categories } from '../../MockData';
 
 
 
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  category = data1;
+  category = Categories;
 
 
 }

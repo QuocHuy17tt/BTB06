@@ -4,11 +4,21 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
+<<<<<<< Updated upstream
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
   userContact: FormGroup;
   constructor(private fb: FormBuilder) {
+=======
+  styleUrls: ['./form.component.css']
+})
+export class FormComponent implements OnInit {
+  userContact: FormGroup;
+
+  constructor(private fb: FormBuilder) { 
+
+>>>>>>> Stashed changes
     this.createForm();
   }
   createForm() {
@@ -32,9 +42,19 @@ export class FormComponent implements OnInit {
       ],
     });
   }
+<<<<<<< Updated upstream
   ngOnInit(): void {}
 
   onSubmit(){
 
   }
+=======
+
+  ngOnInit(): void {
+  }
+  onSubmit(){
+    console.log(this.userContact.value)
+  }
+
+>>>>>>> Stashed changes
 }

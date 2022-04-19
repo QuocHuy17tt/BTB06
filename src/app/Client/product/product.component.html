@@ -23,16 +23,16 @@
         <div class="col">
           <div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
             <!-- Product 1 -->
-            <div class="product-item men" *ngFor="let product of products">
+            <div class="product-item men" *ngFor="let listProduct of products">
               <div class="product discount product_filter">
                 <div class="product_image">
-                  <img src="{{ product.img }}" alt="">
+                  <img src="{{ listProduct.img }}" alt="">
                 </div>
                 <div class="favorite favorite_left"></div>
-                <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-${{product.sale}}</span></div>
+                <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-${{listProduct.sale}}</span></div>
                 <div class="product_info">
-                  <h6 class="product_name"><a href="#">{{product.name}}</a></h6>
-                  <div class="product_price">${{product.currentPrice}}<span>${{product.oldPrice}}</span></div>
+                  <h6 class="product_name"><a href="#">{{listProduct.name}}</a></h6>
+                  <div class="product_price">${{listProduct.currentPrice}}<span>${{listProduct.oldPrice}}</span></div>
                 </div>
               </div>
               <div class="red_button add_to_cart_button"><a href="#">Thêm vào giỏ hàng</a></div>

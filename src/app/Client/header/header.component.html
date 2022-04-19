@@ -6,11 +6,9 @@
             <a href="#">Foods<span>Viet</span></a>
           </div>
           <nav class="navbar">
-            <ul class="navbar_menu">
+            <ul class="navbar_menu" >
               <li><a href="#">Trang chủ</a></li>
-              <li><a href="#">Thực đơn</a></li>
-              <li><a href="#">Liên hệ</a></li>
-              <li><a href="#">About</a></li>
+              <li *ngFor="let listMenu of menu"><a href="#">{{listMenu.menuName}}</a></li>
             </ul>
             <ul class="navbar_user">
               <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>

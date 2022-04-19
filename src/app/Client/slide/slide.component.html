@@ -1,16 +1,16 @@
-<div *ngFor="let data2 of slide">
+<div *ngFor="let listSlide of slide">
   <div
     class="main_slider"
-    style="background-image: url({{data2.slideImage}})"
+    style="background-image: url({{listSlide.slideImage}})"
   >
     <div class="container fill_height">
       <div class="row align-items-center fill_height">
         <div class="col">
           <div class="main_slider_content">
-            <h6>Spring / Summer Collection 2021</h6>
-            <h1>Get up to 30% Off New Arrivals</h1>
+            <h6>{{listSlide.slideText}}</h6>
+            <h1>{{listSlide.slideTextImg}}</h1>
             <div class="red_button shop_now_button">
-              <a href="#">shop now</a>
+              <a href="#">{{listSlide.buttonText}}</a>
             </div>
           </div>
         </div>
