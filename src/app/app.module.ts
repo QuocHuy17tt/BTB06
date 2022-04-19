@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+import {HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Client/header/header.component';
@@ -13,6 +16,7 @@ import { ProductComponent } from './Client/product/product.component';
 import { FeedbackComponent } from './Client/feedback/feedback.component';
 import { BenefitComponent } from './Client/benefit/benefit.component';
 import { NewsletterComponent } from './Client/newsletter/newsletter.component';
+import { FormComponent } from './Client/form/form.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,15 @@ import { NewsletterComponent } from './Client/newsletter/newsletter.component';
     ProductComponent,
     FeedbackComponent,
     BenefitComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule, 
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

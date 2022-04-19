@@ -1,0 +1,69 @@
+<form
+action="post"
+(ngSubmit)="onSubmit()"
+[formGroup]="userContact"
+novalidate
+>
+  <label>Họ tên</label>
+  <input
+    class="form-control"
+    type="text"
+    id="example-text-input"
+    formControlName="userName"
+  />
+  <br>
+  <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userName'].errors?.['required']"
+    >Name is required
+  </span>
+  <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userName'].errors?.['minlength']"
+    >At least 3 characters 
+  </span>
+
+  <br />
+  <br>
+  <label>Số điện thoại</label>
+  <input
+    class="form-control"
+    type="number"
+    id="example-text-input"
+    formControlName="userPhoneNumber"
+  />
+  <br>
+  <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userPhoneNumber'].errors?.['required']"
+    >Phone number is required
+  </span>
+  <span class="alert alert-danger" role="alert"
+    *ngIf="userContact.controls['userPhoneNumber'].errors?.['minlength']"
+    >At least 10 characters</span
+  >
+  <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userPhoneNumber'].errors?.['pattern']"
+    >Incorrect number type</span
+  >
+  <br />
+  <br>
+  <label>Email</label>
+  <input
+    class="form-control"
+    type="email"
+    id="example-text-input"
+    formControlName="userEmail"
+  />
+  <br>
+  <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userEmail'].errors?.['required']"
+    >Email is required
+  </span>
+  <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userEmail'].errors?.['pattern']">
+    Incorrect email type</span
+  >
+  <br>
+  <br>
+  <button
+    id="newsletter_submit"
+    type="submit"
+    class="newsletter_submit_btn trans_300"
+    value="Submit"
+    [disabled]="!userContact.valid"
+  >
+    Đăng ký
+  </button>
+</form>
