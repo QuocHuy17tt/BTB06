@@ -1,24 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-
+import { User } from 'src/app/Product';
+import { ProductService } from '../product.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-<<<<<<< Updated upstream
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
   userContact: FormGroup;
-  constructor(private fb: FormBuilder) {
-=======
-  styleUrls: ['./form.component.css']
-})
-export class FormComponent implements OnInit {
-  userContact: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
-
->>>>>>> Stashed changes
+  user: User = new User();
+  constructor(private fb: FormBuilder, private productService: ProductService) {
     this.createForm();
   }
   createForm() {
@@ -42,19 +35,12 @@ export class FormComponent implements OnInit {
       ],
     });
   }
-<<<<<<< Updated upstream
+
   ngOnInit(): void {}
-
-  onSubmit(){
-
+  onAddUser() {
+    this.productService.AddUser(this.user).subscribe((data) => {
+      window.alert(data);
+      this.userContact.reset();
+    });
   }
-=======
-
-  ngOnInit(): void {
-  }
-  onSubmit(){
-    console.log(this.userContact.value)
-  }
-
->>>>>>> Stashed changes
 }

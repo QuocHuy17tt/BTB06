@@ -1,8 +1,8 @@
 <form
 action="post"
-(ngSubmit)="onSubmit()"
 [formGroup]="userContact"
 novalidate
+
 >
   <label>Họ tên</label>
   <input
@@ -10,6 +10,7 @@ novalidate
     type="text"
     id="example-text-input"
     formControlName="userName"
+    [(ngModel)]="user.userName"
   />
   <br>
   <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userName'].errors?.['required']"
@@ -24,13 +25,11 @@ novalidate
   <label>Số điện thoại</label>
   <input
     class="form-control"
-<<<<<<< Updated upstream
-    type="number"
-=======
     type="double"
->>>>>>> Stashed changes
     id="example-text-input"
     formControlName="userPhoneNumber"
+    [(ngModel)]="user.userPhoneNumber"
+
   />
   <br>
   <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userPhoneNumber'].errors?.['required']"
@@ -51,6 +50,8 @@ novalidate
     type="email"
     id="example-text-input"
     formControlName="userEmail"
+    [(ngModel)]="user.userEmail"
+
   />
   <br>
   <span class="alert alert-danger" role="alert" *ngIf="userContact.controls['userEmail'].errors?.['required']"
@@ -66,6 +67,7 @@ novalidate
     type="submit"
     class="newsletter_submit_btn trans_300"
     value="Submit"
+    (click)="onAddUser()"
     [disabled]="!userContact.valid"
   >
     Đăng ký
